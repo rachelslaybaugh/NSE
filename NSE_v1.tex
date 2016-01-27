@@ -330,6 +330,12 @@ p(\mu,s) = \left\{
 \end{subequations}
 where $n=0, 1, 2, ...$ .
 Assuming $\Sigma_{t1}=1$ and direction of flight $\mu=\pm 1$, \cref{fig2} depicts the comparisons between numerically obtained (through Monte Carlo) path-length distributions and the analytical expressions given in \cref{eq16}. 
+% We may want to indicate the Monte Carlo code. Perhaps as a footnote state that this is
+%  currently an inhouse code but one that is being added to pyne and will therefore be 
+% available in an open source way soon. One of the things I care a lot about is reproducibility.
+% It would be cool to have the final version of this paper point to the functions in pyne and 
+% then host the input, output, and scripts for making the plots somewhere like figshare. We can
+% then site the DOI of everything needed to independently reproduce the results :)
 \begin{figure}[hbt]
     \centering
     \begin{subfigure}{0.495\textwidth}
@@ -361,7 +367,7 @@ TO BE WRITTEN: FIRST AND SECOND MOMENTS $\bl s \bg$ and $\bl s^2\bg$.
 \section{Test Problems and Models}\label{sec4}
 
 The test problems simulated in this paper consider only {\em rod geometry} transport (particles can only travel in the directions $\mu = \pm1$) taking place in a finite 1-D random periodic system with vacuum boundaries.
-The classical transport equation is written as
+The classical transport equation with these restrictions is written as
 \begin{subequations}\label[pluraleq]{eq17}
 \begin{align}
 &\pm \frac{\partial \Psi^{\pm}}{\partial x}(x) + \Sigma_t(x)\Psi^{\pm}(x) 
@@ -509,6 +515,9 @@ The fully discretized system reads
 	&  \psi_m^{0,\pm} = \frac{c}{2}\sum\limits_{n=0}^\infty \omega_n \Sigma_t^n\left( \psi_m^{n,+} + \psi^{n,-}_m\right)  +  \frac{Q_m}{2},\label{eq21b}	
 \end{align}
 \end{subequations}
+% Maybe this is clear and I missed it, but (for my own knowledge), why is the partial derivative
+% in s approximated differently than that in x? Is it because we are assuming the particles have
+% a different behavior in s and x? Can you at some point go through with me why it is this way?
 for some infinite quadrature rule given by the weights $\omega_n$.
 The second order central differences arise as a numerical diffusion term, which is typical for HLL finite volume schemes.
 \begin{figure}[htb]
