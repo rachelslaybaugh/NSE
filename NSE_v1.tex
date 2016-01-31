@@ -84,7 +84,7 @@
 \begin{document}
 
 \title{Nonclassical Particle Transport in 1-D Random Periodic Media}
-\author{{\bf Richard Vasques $^{\dagger,}$}\footnote{Email: \texttt{richard.vasques@fulbrightmail.org}} , {\bf Kai Krycki $^\ddagger$}, {\bf R.\ N.\ Slaybaugh $^\dagger$}\\ \\
+\author{{\bf R.\ Vasques $^{\dagger,}$}\footnote{Email: \texttt{richard.vasques@fulbrightmail.org}} , {\bf K.\ Krycki $^\ddagger$}, {\bf R.\ N.\ Slaybaugh $^\dagger$}\\ \\
 \em {\bf $^\dagger$}University of California, Berkeley\\
 \em Department of Nuclear Engineering\\
 \em 4155 Etcheverry Hall, Berkeley, CA 94720-1730\\
@@ -123,8 +123,7 @@ p(s) = \Sigma_t e^{-\Sigma_t s}.
 However, a nonexponential attenuation law for the particle flux arises in certain inhomogeneous media in which the scattering centers are spatially correlated.
 This ``nonclassical" behavior occurs in certain important applications, such as neutron transport in Pebble Bed Reactors (in which a nonexponential $p(s)$ arises due to the pebble arrangement within the core) and photon transport in atmospheric clouds (in which the locations of the water droplets in the cloud seem to be correlated in ways that measurably affect the radiative transfer within the cloud).
 
-An approach to this type of nonclassical transport problem was recently proposed \cite{lar07,larvas11}, with the assumption that the positions of the scattering
-centers are correlated but independent of direction $\uomega$.
+An approach to this type of nonclassical transport problem was recently proposed \cite{lar07,larvas11}, with the assumption that the positions of the scattering centers are correlated but independent of direction $\uomega$.
 Existence and uniqueness of solutions are rigorously discussed in \cite{fra10}.
 This nonclassical theory was extended in \cite{vaslar14a} to include angular-dependent path-length distributions in order to investigate anisotropic diffusion of neutrons in 3-D PBR cores.
 
@@ -137,8 +136,7 @@ Assuming monoenergetic transport and isotropic scattering, the nonclassical line
 \\&= \frac{\delta(s)}{4\pi}\left[ c\int_{4\pi}\int_0^\infty \Sigma_t(\uomega',s')\psi(\ux,\uomega',s')ds' d\Omega' + Q(\ux) \right]\,, \nonumber
 \end{align}
 where $\ux = (x,y,z)=$ position, $\uomega = (\Omega_x,\Omega_y,\Omega_z)=$ direction of flight (with $|\uomega|=1$), $\psi$ is the nonclassical angular flux, $c$ is the scattering ratio (such that the scattering cross section $\Sigma_s= c\Sigma_t$), and $Q$ is the source.
-Here, the nonclassical angular-dependent ensemble-averaged total cross section $\Sigma_t(\uomega,s)$
-is defined as
+Here, the nonclassical angular-dependent ensemble-averaged total cross section $\Sigma_t(\uomega,s)$ is defined as
 \begin{align}\label{eq3}
 \Sigma_t(\uomega,s)ds =  \begin{array}{l}
 \text{ the probability (ensemble-averaged over all physical}\vspace{-10pt}\\
@@ -165,11 +163,11 @@ for the classical angular flux
 \end{subequations}
 
 Numerical results have been provided for the asymptotic diffusion limit of this nonclassical theory \cite{larvas11,vaslar09,vas13,vaslar14b}, and for moment models of the nonclassical equation in the diffusive regime \cite{kry13}.
-However, very few results have been presented to the nonclassical \textit{transport} equation.
+However, very few results have been presented for the nonclassical \textit{transport} equation.
 This is because one must know $\Sigma_t(\uomega,s)$, or $\Sigma_t(s)$ in the case of angular-independent path lengths, in order to solve \cref{eq2}. 
 
 In this paper we investigate the accuracy of the 1-D nonclassical transport equation.
-We consider a 1-D random periodic system: a spatially periodic system consisting of alternating layers, randomly placed in the $x$-axis.
+We consider a 1-D random periodic system: a spatially periodic system consisting of alternating layers, randomly placed on the $x$-axis.
 This means that we only know which material is present at any given point $x$ in a probabilistic sense.
 The 1-D version of \cref{eq2} is written as
 \begin{align}\label{eq6}
@@ -183,11 +181,18 @@ Then, using the identity \cite{vaslar14a}
 \end{align}
 one can obtain a solution for \cref{eq6}.
 
-The numerical results presented in this paper consider transport in {\em rod geometry}, in which particles can only move in the directions $\mu = \pm 1$. Solutions are given for a total of 72 solid-void test problems. To analyze the accuracy of these results, we compare them against ``benchmark" numerical results, obtained by ensemble-averaging the solutions of the transport equation over a large number of physical realizations of the random system. Furthermore, we compare
-the performance of the nonclassical model against the widely-used atomic mix model.
+The numerical results presented in this paper consider transport in {\em rod geometry}, in which particles can only move in the directions $\mu = \pm 1$.
+Solutions are given for a total of 72 solid-void test problems.
+To analyze the accuracy of these results, we compare them against ``benchmark" numerical results, obtained by ensemble-averaging the solutions of the transport equation over a large number of physical realizations of the random system.
+Furthermore, we compare the performance of the nonclassical model against the widely-used atomic mix model.
 
 This paper is an expanded version of a recent conference paper \cite{mc15}.
-The remainder of this paper is organized as follows. In \cref{sec2} we sketch the 1-D random periodic system under consideration. In \cref{sec3} we analytically derive the path-length distribution function for the periodic random system; explicit expressions for solid-void media are given in \cref{sec3A}. In \cref{sec4} we define the parameters of the test problems and describe the benchmark, atomic mix, and nonclassical approaches to solve them. In \cref{sec5} we examine the numerical results that confirm the accuracy of the nonclassical model. We conclude with a discussion in \cref{sec6}.
+The remainder of this paper is organized as follows.
+In \cref{sec2} we sketch the 1-D random periodic system under consideration.
+In \cref{sec3} we analytically derive the path-length distribution function for the periodic random system; explicit expressions for solid-void media are given in \cref{sec3A}.
+In \cref{sec4} we define the parameters of the test problems and describe the benchmark, atomic mix, and nonclassical approaches to solve them.
+In \cref{sec5} we examine the numerical results that confirm the accuracy of the nonclassical model.
+We conclude with a discussion in \cref{sec6}.
 
 \section{The 1-D Random Periodic System}\label{sec2}
 
@@ -282,7 +287,8 @@ p_{B_i}(x_0,\mu,s) &=  \left\{
 \,\,.
 \end{align}
 \end{subequations}
-Here, $n=0, 1, 2, ...$; $i,j \in\{1,2\}$; $i\neq j$; and $\ell = \ell_i+\ell_j$. It is clear that
+Here, $n=0, 1, 2, ...$; $i,j \in\{1,2\}$; $i\neq j$; and $\ell = \ell_i+\ell_j$.
+It is clear that
 \begin{align}\label{eq12}
 p_{C_i}(x_0,\mu,s)ds &= \begin{array}{l}
 \text{ the probability that a particle born or scattered in}\vspace{-10pt}\\
@@ -354,14 +360,16 @@ p(\mu,s) = \left\{
 \right.
 \end{align}
 \end{subequations}
-where $n=0, 1, 2, ...$ . The first and second moments of $p(\mu,s)$ in \cref{eq16} are given by
+where $n=0, 1, 2, ...$ .
+The first and second moments of $p(\mu,s)$ in \cref{eq16} are given by
 \begin{subequations}\label[pluraleq]{eq17}
 \begin{align}
 \overline{s} &= \int_0^\infty sp(\mu,s)ds = \frac{\ell_1+\ell_2}{\Sigma_{t1}\ell_1}\, ,\\
 \overline{s^2}(\mu) &= \int_0^\infty s^2p(\mu,s)ds = \frac{2\ell_1+4\ell_2}{\Sigma_{t1}^2\ell_1}+\frac{\ell_2^2}{\Sigma_{t1}\ell_1|\mu|}\left(\frac{e^{\Sigma_{t1}\ell_1/|\mu|}+1}{e^{\Sigma_{t1}\ell_1/|\mu|}-1}\right)\, .
 \end{align}
 \end{subequations}
-We point out that the {\em mean free path} $\overline{s}$ does not depend on the direction $\mu$ and it is equivalent to the inverse of the volume-averaged total cross section. On the other hand, the {\em mean square free path} $\overline{s^2}$ is a function of $|\mu|$.
+We point out that the {\em mean free path} $\overline{s}$ does not depend on the direction $\mu$ and it is equivalent to the inverse of the volume-averaged total cross section.
+On the other hand, the {\em mean square free path} $\overline{s^2}$ is a function of $|\mu|$.
 
 \Cref{fig2} depicts examples of path-length distributions and nonclassical cross sections assuming $\Sigma_{t1}=1$ and direction of flight $\mu=\pm 1$.
 \Cref{fig2a,fig2c,fig2e} show a comparison between numerically obtained (through Monte Carlo) $p(s)$ and the analytical expressions given in \cref{eq16}. 
@@ -420,7 +428,8 @@ We point out that the {\em mean free path} $\overline{s}$ does not depend on the
     \caption{Path-length distribution functions and corresponding nonclassical cross sections (assuming $\mu=\pm 1$ and $\Sigma_{t1}=1.0$) }
     \label{fig2}
 \end{figure}
-The ``saw-tooth" behavior of $\Sigma_t(s)$ is consistent with the physical process and can be easily understood. For instance, in the case of $\ell_1=\ell_2=1$ (Case 2):
+The ``saw-tooth" behavior of $\Sigma_t(s)$ is consistent with the physical process and can be easily understood.
+For instance, in the case of $\ell_1=\ell_2=1$ (Case 2):
 \begin{itemize}
 \item[\textbf{1.}] A particle is born or scatters in material 1. The path-length $s$ is set to 0, and $\Sigma_t(0) = \Sigma_{t1} = 1$\vspace{-8pt}
 \item[\textbf{2.}] At $s=1$, the $x$-coordinate {\em must be} in material 2. Thus, $\Sigma_t(1) = \Sigma_{t2} = 0$\vspace{-8pt}
@@ -460,7 +469,11 @@ $\seta_3$ & 1.0 & 0.5 & 1.0 & 1.0 & $\setb_3$ & 40/3 & 20/3 & 0.75 & 0.75\\
   \end{tabular}
 \end{table}
 
-We consider 2 sets of problems ({$\seta$ and $\setb$), each divided in 3 subsets according to the choices of the lengths $\ell_i$ of the material layers. For each subset we present results for 12 different choices of scattering ratios ranging from purely absorbing to diffusive; namely $c_1 \in$ \{0.0; 0.1; 0.2; 0.3; 0.4; 0.5; 0.6; 0.7; 0.8; 0.9; 0.95; 0.99\}. We assume vacuum boundaries at $x = \pm 10$. Material 2 is defined as void, and the parameters of material 1 are given in \cref{tab1}. The source $Q_1(x)$ is defined as 
+We consider 2 sets of problems ({$\seta$ and $\setb$), each divided in 3 subsets according to the choices of the lengths $\ell_i$ of the material layers.
+For each subset we present results for 12 different choices of scattering ratios ranging from purely absorbing to diffusive; namely $c_1 \in$ \{0.0; 0.1; 0.2; 0.3; 0.4; 0.5; 0.6; 0.7; 0.8; 0.9; 0.95; 0.99\}.
+We assume vacuum boundaries at $x = \pm 10$.
+Material 2 is defined as void, and the parameters of material 1 are given in \cref{tab1}.
+The source $Q_1(x)$ is defined as 
 \begin{align}\label{eq19}
 Q_1(x) = \left\{
 \begin{array}{cl}
@@ -469,7 +482,9 @@ q_1, & \text{if} -0.5\leq x\leq 0.5\\
 \end{array}
 \right .\, ; 
 \end{align}
-that is, particles are born {\em near the center} of the random system. The reason for this choice of source region can be visualized in \cref{fig3}, in which the ``wavy" pattern that arises from the periodic structure can be seen in \cref{fig3a}. If we allow $Q_1=1$ for $-X\leq x\leq X$, the solution is smoother, and the pattern is harder to identify (\cref{fig3b}).    
+that is, particles are born {\em near the center} of the random system.
+The reason for this choice of source region can be visualized in \cref{fig3}, in which the ``wavy" pattern that arises from the periodic structure can be seen in \cref{fig3a}.
+If we allow $Q_1=1$ for $-X\leq x\leq X$, the solution is smoother, and the pattern is harder to identify (\cref{fig3b}).    
 \begin{figure}[hbt]
     \centering
     \begin{subfigure}{0.495\textwidth}
@@ -488,8 +503,6 @@ that is, particles are born {\em near the center} of the random system. The reas
     \caption{Ensemble-averaged scalar flux for problem set {$\seta_2$} with $c_1=0.5$}
     \label{fig3}
 \end{figure}
-
-
 
 \subsection{The Benchmark Model}
 
@@ -531,7 +544,8 @@ where
 \end{align}
 \end{subequations}
 We solve \cref{eq20} for the ensembled-averaged angular flux $\bl\Psi\bg$ using a diamond spatial differencing scheme with mesh interval $\triangle x=2^{-7}$.
-The ensemble-averaged {\em atomic mix} scalar flux is given by $\bl\Phi_{AM}\bg(x) = \bl\Psi^+\bg(x)+\bl\Psi^-\bg(x)$. An example is depicted in \cref{fig5}.
+The ensemble-averaged {\em atomic mix} scalar flux is given by $\bl\Phi_{AM}\bg(x) = \bl\Psi^+\bg(x)+\bl\Psi^-\bg(x)$.
+An example is depicted in \cref{fig5}.
 \begin{figure}[htb]
   \centering
   \includegraphics[scale=1]{fig5.eps}
@@ -578,10 +592,11 @@ The second order central differences arise as a numerical diffusion term, which 
 In our calculations we cut off the integration at $s_{\text{max}}=4X=40$ and use the trapezoidal rule.
 We use the same mesh interval $\triangle x=2^{-7}$ as for the previous models, and a CFL number $0.5$ (that is, $\triangle s = 2^{-8}$). 
 Because of the coupling of the initial value to the full solution in \cref{eq21}, this system is solved in a source-iteration manner, where we iterate between \cref{eq22a,eq22b}.
-Finally, the ensemble-averaged {\em nonclassical} scalar flux is given by $\bl\Phi_{NC}\bg(x) = \int_0^{40}[\psi^+(x,s)+\psi^-(x,s)]ds$. An example is depicted in \cref{fig6}.
+Finally, the ensemble-averaged {\em nonclassical} scalar flux is given by $\bl\Phi_{NC}\bg(x) = \int_0^{40}[\psi^+(x,s)+\psi^-(x,s)]ds$.
+An example is depicted in \cref{fig6}.
 
-It was shown in \cite{kry13} that the contraction rate for the source iteration is given by the scattering ratio $c$. The maximum number of source iterations to converge the solution in problem set $\seta$ was 417 (problem $\seta_3$ with $c_1=0.99$);  and in problem set $\setb$ was 251 (problem $\setb_3$ with $c_1=0.99$)
-
+It was shown in \cite{kry13} that the contraction rate for the source iteration is given by the scattering ratio $c$.
+The maximum number of source iterations to converge the solution in problem set $\seta$ was 417 (problem $\seta_3$ with $c_1=0.99$); and in problem set $\setb$ was 251 (problem $\setb_3$ with $c_1=0.99$).
 
 \section{Numerical Results}\label{sec5}
 
@@ -625,61 +640,83 @@ D_{NC} = \frac{1}{2}\frac{\overline{s^2}}{\overline{s}} \approx
 \end{array}
 \right . \, ,
 \end{align}  
-where $\overline{s}$ and $\overline{s^2}$ are defined in \cref{eq17}. The solution of the nonclassical transport equation has been shown to converge to the solution of the nonclassical diffusion equation in the diffusive asymptotic limit \cite{ans16}. Thus, we expect the nonclassical predictions of the ensemble-averaged scalar flux to {\em deteriorate} as the system becomes diffusive, underestimating the correct solution.
+where $\overline{s}$ and $\overline{s^2}$ are defined in \cref{eq17}.
+The solution of the nonclassical transport equation has been shown to converge to the solution of the nonclassical diffusion equation in the diffusive asymptotic limit \cite{ans16}.
+Thus, we expect the nonclassical predictions of the ensemble-averaged scalar flux to {\em deteriorate} as the system becomes diffusive, underestimating the correct solution.
 
-\Cref{fig7} depicts the ensemble-averaged scalar fluxes obtained with each model for the purely absorbing case (\cref{fig7a,fig7c,fig7e}) and for the diffusive case $c_1=0.99$ (\cref{fig7b,fig7d,fig7f}). The benchmark solutions present a sinuous shape due to the periodic structure of the random systems. This pattern becomes less noticeable as the solid/void ratio increases, and as the system becomes more diffusive. It is important to point out that the
-nonclassical model is able to capture this sinuous behavior, while the atomic mix model yields a smooth curve.
+\Cref{fig7} depicts the ensemble-averaged scalar fluxes obtained with each model for the purely absorbing case (\cref{fig7a,fig7c,fig7e}) and for the diffusive case $c_1=0.99$ (\cref{fig7b,fig7d,fig7f}).
+The benchmark solutions present a sinuous shape due to the periodic structure of the random systems.
+This pattern becomes less noticeable as the solid/void ratio increases, and as the system becomes more diffusive.
+It is important to point out that the nonclassical model is able to capture this sinuous behavior, while the atomic mix model yields a smooth curve.
 
-It is easier to analyze the accuracy of these models by examining the relative errors to the benchmark solution. \Cref{figerrA1,figerrA2,figerrB1,figerrB2,figerrC1,figerrC2} show the (absolute) percentage error of the nonclassical and atomic mix predictions of the ensemble-averaged scalar flux with respect to the benchmark solutions. The error plots confirm the theoretical predictions; atomic mix becomes more accurate as the system becomes more diffusive, while the accuracy of the nonclassical model decreases.
+It is easier to analyze the accuracy of these models by examining the relative errors to the benchmark solution.
+\Cref{figerrA1,figerrA2,figerrB1,figerrB2,figerrC1,figerrC2} show the (absolute) percentage error of the nonclassical and atomic mix predictions of the ensemble-averaged scalar flux with respect to the benchmark solutions.
+The error plots confirm the theoretical predictions; atomic mix becomes more accurate as the system becomes more diffusive, while the accuracy of the nonclassical model decreases.
 
-The nonclassical model clearly outperforms atomic mix for all the problems in $\seta_1$ and for most of the problems in sets $\seta_2$ and $\seta_3$. The exceptions take place for the cases $c_1=0.95$ and $c_1=0.99$, in which the accuracy of the atomic mix model overtakes that of the nonclassical. \Cref{tab2,tab3,tab4} show that the nonclassical model tends to
-underestimate the scalar flux, while atomic mix overestimates the solution. The nonclassical model never reaches an error larger than 3.7\% in estimating the solutions' peak (at $x=0$). On the other hand, the atomic mix estimate exceeds 5\% error in several problems, reaching a maximum of 8.24\%.
+The nonclassical model clearly outperforms atomic mix for all the problems in $\seta_1$ and for most of the problems in sets $\seta_2$ and $\seta_3$.
+The exceptions take place for the cases $c_1=0.95$ and $c_1=0.99$, in which the accuracy of the atomic mix model overtakes that of the nonclassical.
+\Cref{tab2,tab3,tab4} show that the nonclassical model tends to
+underestimate the scalar flux, while atomic mix overestimates the solution.
+The nonclassical model never reaches an error larger than 3.7\% in estimating the solutions' peak (at $x=0$).
+On the other hand, the atomic mix estimate exceeds 5\% error in several problems, reaching a maximum of 8.24\%.
 
-It can also be seen from the results at the boundaries that the atomic mix model generates a solution with a large tail and it greatly overestimates the outgoing flux, in some problems by several orders of magnitude. The nonclassical model, however, never reaches an error larger than 4.7\%.
+It can also be seen from the results at the boundaries that the atomic mix model generates a solution with a large tail and it greatly overestimates the outgoing flux, in some problems by several orders of magnitude.
+The nonclassical model, however, never reaches an error larger than 4.7\%.
 
 \subsection{Problem Set $\setb$}
 
-Following the work presented in \cref{sec3A}, \cref{fig14} shows the path-length distributions and nonclassical cross sections of problem set $\setb$. We have chosen the parameters of this set such that:
+Following the work presented in \cref{sec3A}, \cref{fig14} shows the path-length distributions and nonclassical cross sections of problem set $\setb$.
+We have chosen the parameters of this set such that:
 \begin{itemize}
 \item[i.] The optical thickness of each layer of material 1 is one order of magnitude larger than a mean free path: $\ell_1\Sigma_{t1} = 10$;
 \vspace{-4pt}
 \item[ii.] The volume-averaged parameters remain the same in all problems in the set: $\bl \Sigma_t \bg = \bl q_1 \bg = 0.5$.
 \end{itemize}
-The large optical thickness implies that the problems in this set are {\em not} the type of problems for which the atomic mix model is known to yield the correct aymptotic diffusive limit. By fixing the volume-averaged parameters, the atomic mix model will yield exactly the same ensemble-averaged scalar flux for all problems in set $\setb$ (which is the same as in $\seta_2$). The goal is to investigate whether the nonclassical model will outperform atomic mix for the diffusive cases.
+The large optical thickness implies that the problems in this set are {\em not} the type of problems for which the atomic mix model is known to yield the correct aymptotic diffusive limit.
+By fixing the volume-averaged parameters, the atomic mix model will yield exactly the same ensemble-averaged scalar flux for all problems in set $\setb$ (which is the same as in $\seta_2$).
+The goal is to investigate whether the nonclassical model will outperform atomic mix for the diffusive cases.
 
-\Cref{fig15} depicts the ensemble-averaged scalar fluxes obtained with each model for the purely absorbing case (\cref{fig15a,fig15c,fig15e}) and for the diffusive case $c_1=0.99$ (\cref{fig15b,fig15d,fig15f}). The sinuous pattern of the benchmark solution is easier to notice in set $\setb_3$, with the largest solid/void ratio. As in the case in set $\seta$, the
-nonclassical model is able to capture the sinuous behavior. The atomic mix model generates the same smooth solution for each choice of $c_1$, unable to capture the differences in the scalar flux caused by the different choices of $\ell_i$, $\Sigma_{ti}$, and $q_i$.
+\Cref{fig15} depicts the ensemble-averaged scalar fluxes obtained with each model for the purely absorbing case (\cref{fig15a,fig15c,fig15e}) and for the diffusive case $c_1=0.99$ (\cref{fig15b,fig15d,fig15f}).
+The sinuous pattern of the benchmark solution is easier to notice in set $\setb_3$, with the largest solid/void ratio.
+As in the case in set $\seta$, the nonclassical model is able to capture the sinuous behavior.
+The atomic mix model generates the same smooth solution for each choice of $c_1$, unable to capture the differences in the scalar flux caused by the different choices of $\ell_i$, $\Sigma_{ti}$, and $q_i$.
 
-\Cref{figerrD1,figerrD2,figerrE1,figerrE2,figerrF1,figerrF2} show the percentage error of the nonclassical and atomic mix predictions of the ensemble-averaged scalar flux with respect to the benchmark solutions {\em in logarithmic scale}. The changes in the accuracy of both models have a different pattern than in problem set $\seta$. The atomic mix solutions tend to grossly overestimate the ensemble-averaged scalar flux in most of the system, with errors at $x=0$ reaching 36\% as seen in \cref{tab5,tab6,tab7}. Once $x$ approaches the boundaries, the atomic mix model systematically underestimates the solution, with errors in the outgoing flux exceeding 50\% in most test problems and reaching over 80\% in the least diffusive systems.
+\Cref{figerrD1,figerrD2,figerrE1,figerrE2,figerrF1,figerrF2} show the percentage error of the nonclassical and atomic mix predictions of the ensemble-averaged scalar flux with respect to the benchmark solutions {\em in logarithmic scale}.
+The changes in the accuracy of both models have a different pattern than in problem set $\seta$.
+The atomic mix solutions tend to grossly overestimate the ensemble-averaged scalar flux in most of the system, with errors at $x=0$ reaching 36\% as seen in \cref{tab5,tab6,tab7}.
+Once $x$ approaches the boundaries, the atomic mix model systematically underestimates the solution, with errors in the outgoing flux exceeding 50\% in most test problems and reaching over 80\% in the least diffusive systems.
 
-Once again, the nonclassical model underestimates the solution in diffusive systems. For most problems the nonclassical error in estimating the ensemble-averaged scalar flux at $x=0$ is less than 4\%. The exceptions are the most diffusive problems, with scattering ratios $c_1 = 0.95$ and $c_1 = 0.99$. Nevertheless, even in these diffusive cases the nonclassical model greatly outperforms the atomic mix approach.
+Once again, the nonclassical model underestimates the solution in diffusive systems.
+For most problems the nonclassical error in estimating the ensemble-averaged scalar flux at $x=0$ is less than 4\%.
+The exceptions are the most diffusive problems, with scattering ratios $c_1 = 0.95$ and $c_1 = 0.99$.
+Nevertheless, even in these diffusive cases the nonclassical model greatly outperforms the atomic mix approach.
 
 \section{Conclusion}\label{sec6}
 
-This work presents an investigation of the accuracy of the nonclassical transport theory in estimating the ensemble-averaged scalar flux in 1-D random periodic media. The analytical portion of the paper considers transport in a {\em slab} consisting of alternating layers of any 2 materials. The following simplifying assumptions are made for the numerical simulations: (i) the 1-D system is a periodic arrangement of {\em solid and void} layers randomly placed in the $x$-axis; and (ii) particle transport takes place in {\em rod geometry}. This paper is an expanded version of a recent conference paper \cite{mc15}, in which numerical solutions for the nonclassical transport equation were provided for the first time. 
+This work presents an investigation of the accuracy of the nonclassical transport theory in estimating the ensemble-averaged scalar flux in 1-D random periodic media.
+The analytical portion of the paper considers transport in a {\em slab} consisting of alternating layers of any 2 materials.
+The following simplifying assumptions are made for the numerical simulations: (i) the 1-D system is a periodic arrangement of {\em solid and void} layers randomly placed in the $x$-axis; and (ii) particle transport takes place in {\em rod geometry}.
+This paper is an expanded version of a recent conference paper \cite{mc15}, in which numerical solutions for the nonclassical transport equation were provided for the first time. 
 
-A total of 72 test problems are analyzed. We show that the nonclassical theory greatly outperforms the atomic mix model in estimating the ensemble-averaged scalar flux for most problems and that it qualitatively
-preserves the sinuous shape of the solution. The few cases in which atomic mix is more accurate are part of a class of diffusive problems in which the atomic mix model is known to converge to the correct diffusive limit (diffusive problems in set $\seta$). In this small subset of problems the nonclassical model converges to a diffusion solution with an unphysically large diffusion coefficient, causing the nonclassical solution to underestimate the ensemble-averaged scalar flux. However, for diffusive problems that are {\em not} in the atomic mix limit (set $\setb$), the nonclassical model is clearly superior to the atomic mix approach.
+A total of 72 test problems are analyzed.
+We show that the nonclassical theory greatly outperforms the atomic mix model in estimating the ensemble-averaged scalar flux for most problems and that it qualitatively preserves the sinuous shape of the solution.
+The few cases in which atomic mix is more accurate are part of a class of diffusive problems in which the atomic mix model is known to converge to the correct diffusive limit (diffusive problems in set $\seta$).
+In this small subset of problems the nonclassical model converges to a diffusion solution with an unphysically large diffusion coefficient, causing the nonclassical solution to underestimate the ensemble-averaged scalar flux.
+However, for diffusive problems that are {\em not} in the atomic mix limit (set $\setb$), the nonclassical model is clearly superior to the atomic mix approach.
 
-This gain in accuracy comes at a cost: the path-length distribution function $p(s)$ (and its
-corresponding $\Sigma_t(s)$) must be known in order to solve the nonclassical transport equation. Despite the extra work, it is our expectation that the gain in accuracy will prove the effort worthwhile in the important nuclear system where nonclassical transport takes place, such as in
-Pebble Bed and Boiling Water reactor cores.
+This gain in accuracy comes at a cost: the path-length distribution function $p(s)$ (and its corresponding $\Sigma_t(s)$) must be known in order to solve the nonclassical transport equation.
+Despite the extra work, it is our expectation that the gain in accuracy will prove the effort worthwhile in the important nuclear system where nonclassical transport takes place, such as in Pebble Bed and Boiling Water reactor cores.
 % In the revision we might want to emphasize this point more in the intro/abstract/here. 
 In particular, the nonclassical theory represents an alternative to current methods that might yield more accurate estimates of the eigenvalue and eigenfunction in a criticality calculation.
 
-Future work includes (i) performing a thorough numerical investigation of the nonclassical theory in slab geometry to further validate our analytical results; (ii) comparing the gain in accuracy against other models and experimental data; and (iii) dropping the periodic assumption to investigate results in more realistic random media. We
-point out that step (iii) cannot be performed with the analytical approach to obtain the path-lengths presented
-in this paper. It requires either a numerical approach to estimate $p(\mu,s)$, or a (much) more complex
-mathematical theory.
+Future work includes (i) performing a thorough numerical investigation of the nonclassical theory in slab geometry to further validate our analytical results; (ii) comparing the gain in accuracy against other models and experimental data; and (iii) dropping the periodic assumption to investigate results in more realistic random media.
+We point out that step (iii) cannot be performed with the analytical approach to obtain the path-lengths presented in this paper.
+It requires either a numerical approach to estimate $p(\mu,s)$, or a (much) more complex mathematical theory.
 
 \section*{Acknowledgments}
 
-This paper was prepared by Richard Vasques and Rachel
-Slaybaugh under award number NRC-HQ-84-14-G-0052 from
-the Nuclear Regulatory Commission. The statements, findings,
-conclusions, and recommendations are those of the authors
-and do not necessarily reflect the view of the U.S. Nuclear
-Regulatory Commission.
+This paper was prepared by Richard Vasques and Rachel Slaybaugh under award number NRC-HQ-84-14-G-0052 from the Nuclear Regulatory Commission.
+The statements, findings, conclusions, and recommendations are those of the authors and do not necessarily reflect the view of the U.S. Nuclear Regulatory Commission.
 
 \appendix
 
@@ -689,8 +726,8 @@ Regulatory Commission.
 
 \section{1-D Asymptotic Analysis}\label{appa}
 
-Following \cite{vaslar14a},  we scale the parameters of \cref{eq6} such that $\Sigma_t = O(1)$, 
-$ 1-c = O(\varepsilon^2) $, $Q=O(\varepsilon^2)$,  $\partial \psi / \partial s = O(1)$, and $\mu \partial \psi/\partial x = O(\eps)$, with $\varepsilon \ll 1$. In this scaling, \cref{eq6} becomes
+Following \cite{vaslar14a},  we scale the parameters of \cref{eq6} such that $\Sigma_t = O(1)$, $ 1-c = O(\varepsilon^2) $, $Q=O(\varepsilon^2)$,  $\partial \psi / \partial s = O(1)$, and $\mu \partial \psi/\partial x = O(\eps)$, with $\varepsilon \ll 1$.
+In this scaling, \cref{eq6} becomes
   \begin{align}
     &\frac{\partial \psi}{\partial s}  (x, \mu,s) 
       + \eps\mu\frac{\partial\psi}{\partial x}(x, \mu, s)
@@ -740,12 +777,13 @@ and equating the coefficients of different powers of $\varepsilon$, we obtain fo
 \hat\psi_{n-2}(x, \mu', s') ds' d\mu' + \delta_{n,2} \overline{s} \frac{Q( x)}{2} \,, 
    \nonumber
    \end{align}
-with $\hat\psi_{-1}=\hat\psi_{-2}=0$. \Cref{eqap7} with $n=0$ has the general solution
+with $\hat\psi_{-1}=\hat\psi_{-2}=0$.
+\Cref{eqap7} with $n=0$ has the general solution
    \begin{equation}
       \hat\psi_0(x, \mu, s) = \frac{\hat\phi_0(x)}{2} \,,
    \end{equation}
-where $\hat\phi_0(x)$ is undetermined at this point. For $n=1$,
-\cref{eqap7} has a particular solution of the form:
+where $\hat\phi_0(x)$ is undetermined at this point.
+For $n=1$, \cref{eqap7} has a particular solution of the form:
     \begin{equation}
       \hat\psi^{part}_1(x, \mu, s) = - \frac{s\mu}{2}\frac{d \hat\phi_0}{d x}(x) \,,
    \end{equation}   
@@ -760,8 +798,7 @@ where $\hat\phi_1(x)$ is undetermined.
     0 = \frac{1}{2}\int_{-1}^1\int_0^{\infty}p(\mu,s)&\left(\frac{(s\mu)^2}{2} \frac{d^2\hat\phi_0}{dx^2}(x)\right)ds d\mu \\
     & - \frac{1-c}{2} \int_{-1}^1\int_0^{\infty} p(\mu,s) \hat\phi_0( x) \, ds d\mu + \overline{s} Q( x)\,.\nonumber 
    \end{align}
-Thus, using the fact that $\int_{0}^\infty p(\mu,s)ds =1$,
-we can rewrite \cref{eqap11} as:
+Thus, using the fact that $\int_{0}^\infty p(\mu,s)ds =1$, we can rewrite \cref{eqap11} as:
 \begin{subequations}\label{eqap12}
 \begin{align}
       -D_{NC}\frac{d^2\hat\phi_0}{dx^2}(x) + \frac{1-c}{\overline{s} } \hat\phi_0(x) = Q(x)\,,\label{eqap12a}
@@ -776,19 +813,19 @@ Therefore, the solution $\psi(x, \mu, s)$ of \cref{eqap3} satisfies
       \psi(x, \mu, s) = \frac{\hat\phi_0(x)}{2} \frac{e^{- \int_0^s \Sigma_t(\mu, s') ds'}} 
          {\overline{s}} + O(\varepsilon) \,,
    \end{equation} 
-where $\hat\phi_0(x)$ satisfies \cref{eqap12}. The classical angular flux can be obtained to leading order by integrating \cref{eqap13} over $0 < s < \infty$.
+where $\hat\phi_0(x)$ satisfies \cref{eqap12}.
+The classical angular flux can be obtained to leading order by integrating \cref{eqap13} over $0 < s < \infty$.
 For transport in {\em rod geometry}, \cref{eqap12b} yields
 \begin{align}
 D_{NC} = \frac{1}{2}\frac{\overline{s^2}}{\overline{s}},
 \end{align} 
 where $\overline{s^2} = \int_0^\infty s^2 p(s)ds$.
+
 \pagebreak
 \begin{singlespace}
 \bibliography{references}
 \bibliographystyle{ans}
 \end{singlespace}
-
-
 
 \setcounter{subfigure}{0}
 \begin{figure}[h]
