@@ -601,7 +601,7 @@ For a better analysis of these results, we define the relative errors of the mod
 
 The lengths of the material 1 layers in this set are the same order as a mean free path; that is, $\ell_1\Sigma_{t1} = O(1)$.
 It has been shown \cite{larvas05} that, in the diffusive asymptotic limit, the diffusion coefficient of such problems is correctly estimated by the atomic mix model.
-For the rod geometry problems in set $\seta$ this diffusion coefficient is given by
+For the rod geometry problems in set $\seta$, this diffusion coefficient is given by
 \begin{align}\label{eq24}
 D = \frac{\ell_1+\ell_2}{\Sigma_{t1}\ell_1} = \frac{1}{\bl\Sigma_t\bg} =
 \left\{
@@ -635,7 +635,7 @@ It is easier to analyze the accuracy of these models by examining the relative e
 The nonclassical model clearly outperforms atomic mix for all the problems in $\seta_1$ and for most of the problems in sets $\seta_2$ and $\seta_3$. The exceptions take place for the cases $c_1=0.95$ and $c_1=0.99$, in which the accuracy of the atomic mix model overtakes that of the nonclassical. \Cref{tab2,tab3,tab4} show that the nonclassical model tends to
 underestimate the scalar flux, while atomic mix overestimates the solution. The nonclassical model never reaches an error larger than 3.7\% in estimating the solutions' peak (at $x=0$). On the other hand, the atomic mix estimate exceeds 5\% error in several problems, reaching a maximum of 8.24\%.
 
-It can also be seen from the results at the boundaries that the atomic mix model generates a solution with a large tail. It greatly overestimates the outgoing flux, in some problems by several orders of magnitude. The nonclassical model, however, never reaches an error larger than 4.7\%.
+It can also be seen from the results at the boundaries that the atomic mix model generates a solution with a large tail and it greatly overestimates the outgoing flux, in some problems by several orders of magnitude. The nonclassical model, however, never reaches an error larger than 4.7\%.
 
 \subsection{Problem Set $\setb$}
 
@@ -647,10 +647,10 @@ Following the work presented in \cref{sec3A}, \cref{fig14} shows the path-length
 \end{itemize}
 The large optical thickness implies that the problems in this set are {\em not} the type of problems for which the atomic mix model is known to yield the correct aymptotic diffusive limit. By fixing the volume-averaged parameters, the atomic mix model will yield exactly the same ensemble-averaged scalar flux for all problems in set $\setb$ (which is the same as in $\seta_2$). The goal is to investigate whether the nonclassical model will outperform atomic mix for the diffusive cases.
 
-\Cref{fig15} depicts the ensemble-averaged scalar fluxes obtained with each model for the purely absorbing case (\cref{fig15a,fig15c,fig15e}) and for the diffusive case $c_1=0.99$ (\cref{fig15b,fig15d,fig15f}). The sinuous pattern of the benchmark solution is easier to notice in set $\setb_3$, with the largest solid/void ratio. As it was the case in set $\seta$, the
-nonclassical model is able to capture this sinuous behavior. The atomic mix model generates the same smooth solution for each choice of $c_1$, unable to capture the differences in the scalar flux caused by the different choices of $\ell_i$, $\Sigma_{ti}$, and $q_i$.
+\Cref{fig15} depicts the ensemble-averaged scalar fluxes obtained with each model for the purely absorbing case (\cref{fig15a,fig15c,fig15e}) and for the diffusive case $c_1=0.99$ (\cref{fig15b,fig15d,fig15f}). The sinuous pattern of the benchmark solution is easier to notice in set $\setb_3$, with the largest solid/void ratio. As in the case in set $\seta$, the
+nonclassical model is able to capture the sinuous behavior. The atomic mix model generates the same smooth solution for each choice of $c_1$, unable to capture the differences in the scalar flux caused by the different choices of $\ell_i$, $\Sigma_{ti}$, and $q_i$.
 
-\Cref{figerrD1,figerrD2,figerrE1,figerrE2,figerrF1,figerrF2} show the percentage error of the nonclassical and atomic mix predictions of the ensemble-averaged scalar flux with respect to the benchmark solutions {\em in logarithmic scale}. The changes in the accuracy of both models do not follow the same pattern as in the problem set $\seta$. The atomic mix solutions tend to grossly overestimate the ensemble-averaged scalar flux in most of the system, with errors at $x=0$ reaching 36\% as seen in \cref{tab5,tab6,tab7}. Once $x$ approaches the boundaries the atomic mix model systematically underestimates the solution, with errors in the outgoing flux exceeding 50\% in most test problems and reaching over 80\% in the least diffusive systems.
+\Cref{figerrD1,figerrD2,figerrE1,figerrE2,figerrF1,figerrF2} show the percentage error of the nonclassical and atomic mix predictions of the ensemble-averaged scalar flux with respect to the benchmark solutions {\em in logarithmic scale}. The changes in the accuracy of both models have a different pattern than in problem set $\seta$. The atomic mix solutions tend to grossly overestimate the ensemble-averaged scalar flux in most of the system, with errors at $x=0$ reaching 36\% as seen in \cref{tab5,tab6,tab7}. Once $x$ approaches the boundaries, the atomic mix model systematically underestimates the solution, with errors in the outgoing flux exceeding 50\% in most test problems and reaching over 80\% in the least diffusive systems.
 
 Once again, the nonclassical model underestimates the solution in diffusive systems. For most problems the nonclassical error in estimating the ensemble-averaged scalar flux at $x=0$ is less than 4\%. The exceptions are the most diffusive problems, with scattering ratios $c_1 = 0.95$ and $c_1 = 0.99$. Nevertheless, even in these diffusive cases the nonclassical model greatly outperforms the atomic mix approach.
 
